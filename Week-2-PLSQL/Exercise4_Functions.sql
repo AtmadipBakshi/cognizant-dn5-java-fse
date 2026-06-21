@@ -1,0 +1,16 @@
+CREATE OR REPLACE FUNCTION CalculateAge(
+    p_dob DATE
+)
+RETURN NUMBER
+IS
+BEGIN
+    RETURN FLOOR(MONTHS_BETWEEN(SYSDATE, p_dob) / 12);
+END;
+/
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(
+        'Age: ' || CalculateAge(TO_DATE('1985-05-15','YYYY-MM-DD'))
+    );
+END;
+/
