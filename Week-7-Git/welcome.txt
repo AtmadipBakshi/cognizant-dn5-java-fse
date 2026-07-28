@@ -1,0 +1,3 @@
+Welcome to Git HOL 1
+This is Git HOL 2
+This line was added in feature branch
